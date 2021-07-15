@@ -1,0 +1,15 @@
+{
+  "app_name": "Klub Młodych Liderów",
+  "login_successful": "Zalogowano!",
+  "wrong_password_or_login": "Nieprawidłowy login lub hasło",
+  "no_internet_connection": "Brak połączenia z internetem!",
+  "e_mail": "e-mail",
+  "password": "hasło",
+  "log_in": "Zaloguj się",
+  "join_year": "Rok dołączenia",
+  "work_time": "Czas Pracy",
+  "work_time_season": "W tym sezonie",
+  "work_time_month": "W tym miesiącu",
+  "sections": "Sekcje",
+  "somethings_wrong":"Coś poszło nie tak!"
+}
