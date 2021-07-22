@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:kml_flutter_app/core/Constants.dart';
 import 'package:kml_flutter_app/core/error/exceptions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -21,7 +22,7 @@ class LoginLocalDataSourceImpl extends LoginLocalDataSource {
   @override
   Future<LoginModel> getSavedLoginData() async {
     final json = sharedPreferences.getString(LOGIN_MODEL_KEY);
-    if (json.isNotEmpty)
+    if (json != Constants.EMPTY_STRING && json != null)
       return LoginModel.fromJson(json);
     else
       throw CacheException();

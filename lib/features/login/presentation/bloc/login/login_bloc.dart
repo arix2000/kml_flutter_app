@@ -29,7 +29,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     } else if (event is GetLogDataEvent) {
       final failureOrData = await getSavedLogData();
       yield failureOrData.fold(
-              (failure) => Error(failure.getErrorMessage()),
+              (failure) => Empty(),
               (logData) => CacheLoaded(logData));
     }
   }
