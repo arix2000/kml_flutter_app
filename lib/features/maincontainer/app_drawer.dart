@@ -15,6 +15,7 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.person),
             title: Text("Profil"),
             onTap: () {
+              Navigator.pop(context);
               Navigator.pushNamed(context, ProfilePage.route);
               Navigator.pop(context);
             },
@@ -43,7 +44,7 @@ class AppDrawer extends StatelessWidget {
           ),
           SizedBox(height: 10,),
           ListTile(
-            leading: Icon(Icons.personal_injury),
+            leading: Icon(Icons.self_improvement_rounded),
             title: Text("Dziennik Indywidualny"),
             onTap: () {
               Navigator.pop(context);
