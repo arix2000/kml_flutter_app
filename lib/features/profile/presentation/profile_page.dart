@@ -21,32 +21,46 @@ class ProfilePage extends StatelessWidget {
       create: (context) => sl<ProfileBloc>(),
       child: Scaffold(
         body: Center(
-        child: Column(
-          children: [
-            profileTopPart,
-            bloc.BlocBuilder<ProfileBloc, ProfileState>(
-                builder: (context, state) {
-              if (state is Loaded) {
-                profileTopPart.setNameAndType(state.result);
-                return ProfileBottomPart(profile: state.result);
-              } else if (state is InitialProfileState) {
-                _getData(context, MainContainer.loginId);
-                return CircularProgressIndicator();
-              } else if (state is Loading)
-                return CircularProgressIndicator();
-              else if (state is Error)
-                return Text(context.getString('somethings_wrong'));
-              else
-                return Text(context.getString('somethings_wrong'));
-            }),
-          ],
+          child: Column(
+            children: [
+              profileTopPart,
+              bloc.BlocBuilder<ProfileBloc, ProfileState>(
+                  builder: (context, state) {
+                if (state is Loaded) {
+                  profileTopPart.setNameAndType(state.result);
+                  return ProfileBottomPart(profile: state.result);
+                } else if (state is InitialProfileState) {
+                  _getData(context, MainContainer.loginId);
+                  return CircularProgressIndicator();
+                } else if (state is Loading)
+                  return CircularProgressIndicator();
+                else if (state is Error)
+                  return Text(context.getString('somethings_wrong'));
+                else
+                  return Text(context.getString('somethings_wrong'));
+              }),
+            ],
+          ),
         ),
-      ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
+        floatingActionButton: IconButton(
+          onPressed: () {
+            _openDialog(context);
+          },
+          icon: Icon(
+            Icons.vpn_key_rounded,
+            color: context.primaryColor,
+          ),
+        ),
       ),
     );
   }
 
   void _getData(BuildContext context, int userId) {
     bloc.BlocProvider.of<ProfileBloc>(context).add(FetchProfileEvent(userId));
+  }
+
+  void _openDialog(BuildContext context) {
+
   }
 }
