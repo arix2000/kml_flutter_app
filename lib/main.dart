@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
       title: 'Kml app',
       theme: ThemeData(
           brightness: Brightness.dark,
-          primaryColor: Colors.blue.shade800,
-          accentColor: Colors.blue.shade900),
+          primaryColor: Color.fromARGB(255, 63, 95, 190),
+          accentColor: Color.fromARGB(255, 63, 95, 190)),
       supportedLocales: [const Locale('pl', 'PL')],
       localizationsDelegates: [
         AppLocalizations.delegate,
