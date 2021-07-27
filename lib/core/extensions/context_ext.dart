@@ -8,4 +8,5 @@ extension ContextExt on BuildContext {
   }
 
   Color get primaryColor => Theme.of(this).primaryColor;
+  Color get accentColor => Theme.of(this).accentColor;
 }

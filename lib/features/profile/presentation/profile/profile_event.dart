@@ -12,3 +12,5 @@ class FetchProfileEvent extends ProfileEvent {
 
   FetchProfileEvent(this.userId): super([userId]);
 }
+
+class OpenChangePassDialogEvent extends ProfileEvent {}

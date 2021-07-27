@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class AppButton extends StatelessWidget {
   final String buttonText;
   final Function() onPressed;
+  final Color textColor;
 
-  const AppButton({Key key, this.buttonText, this.onPressed}) : super(key: key);
+  AppButton({Key key, @required this.buttonText, this.onPressed, this.textColor = Colors.white}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        child: Text(buttonText, style: TextStyle(color: Colors.white)),
+        child: Text(buttonText, style: TextStyle(color: textColor)),
         style: ButtonStyle(
           padding: MaterialStateProperty.all(EdgeInsets.all(15)),
             shape: MaterialStateProperty.all(

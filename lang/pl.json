@@ -12,5 +12,9 @@
   "work_time_month": "W tym miesiącu",
   "sections": "Sekcje",
   "somethings_wrong":"Coś poszło nie tak!",
-  "drawer_header_email":"kmlmielec@gmail.com"
+  "drawer_header_email":"kmlmielec@gmail.com",
+  "change_password":"Zmień hasło",
+  "enter_old_pass":"Podaj stare hasło:",
+  "enter_new_pass":"Podaj nowe hasło:",
+  "cancel":"Anuluj"
 }
