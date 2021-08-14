@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:http/http.dart';
 import 'package:kml_flutter_app/core/error/exceptions.dart';
 import 'package:kml_flutter_app/core/network/app_client.dart';
 import 'package:kml_flutter_app/core/network/network_info.dart';
@@ -12,7 +11,6 @@ class LoginRemoteDataSourceImpl implements LoginRemoteDataSource {
   LoginRemoteDataSourceImpl(this.httpClient);
   @override
   Future<String> sendLoginData(LoginModel login) async {
-    print(API_URL+LOGIN_ENDPOINT);
     final body = _createBodyMap(login);
     final response = await httpClient.post(
         Uri.parse(API_URL+LOGIN_ENDPOINT),

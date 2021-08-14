@@ -3,6 +3,10 @@ import 'package:get_it/get_it.dart';
 import 'package:http/http.dart';
 import 'package:kml_flutter_app/core/network/app_client.dart';
 import 'package:kml_flutter_app/core/network/network_info.dart';
+import 'package:kml_flutter_app/features/changepassword/data/change_pass_remote_data_source.dart';
+import 'package:kml_flutter_app/features/changepassword/data/change_pass_repository_impl.dart';
+import 'package:kml_flutter_app/features/changepassword/domain/change_pass_repository.dart';
+import 'package:kml_flutter_app/features/changepassword/domain/change_pass_use_case.dart';
 import 'package:kml_flutter_app/features/changepassword/presentation/change_pass/change_pass_bloc.dart';
 import 'package:kml_flutter_app/features/login/data/datasources/login_local_data_source.dart';
 import 'package:kml_flutter_app/features/login/data/datasources/login_local_data_source_impl.dart';
@@ -39,7 +43,10 @@ Future<void> init() async {
   sl.registerLazySingleton<ProfileRepository>(() => ProfileRepositoryImpl(sl(), sl()));
 
   // Features - ChangePass
-  sl.registerFactory(() => ChangePassBloc());
+  sl.registerFactory(() => ChangePassBloc(sl()));
+  sl.registerLazySingleton(() => ChangePassUseCase(sl()));
+  sl.registerLazySingleton<ChangePassRemoteDataSource>(() => ChangePassRemoteDataSourceImpl(sl()));
+  sl.registerLazySingleton<ChangePassRepository>(() => ChangePassRepositoryImpl(sl(), sl()));
 
   // Core
   sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(sl()));

@@ -21,7 +21,8 @@ class LoginRepositoryImpl implements LoginRepository {
     if (await networkInfo.isConnected) {
       try {
         final result = await remoteDataSource.sendLoginData(loginData);
-        if (result.contains("true")) saveLoginData(loginData);
+        if (result.contains("true"))
+          saveLoginData(loginData);
         return Right(result);
       } on ServerException {
         return Left(ServerFailure());

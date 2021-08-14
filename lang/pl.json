@@ -16,5 +16,9 @@
   "change_password":"Zmień hasło",
   "enter_old_pass":"Podaj stare hasło:",
   "enter_new_pass":"Podaj nowe hasło:",
-  "cancel":"Anuluj"
+  "cancel":"Anuluj",
+  "empty_pools": "Pozostały puste pola!",
+  "something_wrong": "Coś poszło nie tak! Spróbuj ponownie później",
+  "wrong_old_password": "Nieprawidłowe stare hasło!",
+  "password_has_been_changed": "Hasło zostało zmienione!"
 }

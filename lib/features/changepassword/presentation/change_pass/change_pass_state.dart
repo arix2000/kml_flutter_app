@@ -9,6 +9,10 @@ class Loading extends ChangePassState {}
 
 class Loaded extends ChangePassState {}
 
+class PassChangeFailed extends ChangePassState {}
+
+class ValidationFailed extends ChangePassState {}
+
 class Failed extends ChangePassState {
   final String message;
 

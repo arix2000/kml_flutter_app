@@ -3,10 +3,11 @@ part of 'change_pass_bloc.dart';
 @immutable
 abstract class ChangePassEvent {}
 
-class ChangePassFailedEvent extends ChangePassEvent {
-  final String message;
+class ChangePassClickedEvent extends ChangePassEvent {
+  final String oldPass;
+  final String newPass;
 
-  ChangePassFailedEvent(this.message);
+  ChangePassClickedEvent(this.oldPass, this.newPass);
 }
 
-class ChangePassSuccessfulEvent extends ChangePassEvent {}
+class ValidationFailedEvent extends ChangePassEvent {}
