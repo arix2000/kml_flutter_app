@@ -11,5 +11,19 @@
   "work_time_season": "W tym sezonie",
   "work_time_month": "W tym miesiącu",
   "sections": "Sekcje",
-  "somethings_wrong":"Coś poszło nie tak!"
+  "somethings_wrong":"Coś poszło nie tak!",
+  "drawer_header_email":"kmlmielec@gmail.com",
+  "change_password":"Zmień hasło",
+  "enter_old_pass":"Podaj stare hasło:",
+  "enter_new_pass":"Podaj nowe hasło:",
+  "cancel":"Anuluj",
+  "empty_pools": "Pozostały puste pola!",
+  "something_wrong": "Coś poszło nie tak! Spróbuj ponownie później",
+  "wrong_old_password": "Nieprawidłowe stare hasło!",
+  "password_has_been_changed": "Hasło zostało zmienione!",
+  "no_results": "Brak wyników :(",
+  "work_name": "Nazwa Zadania:",
+  "work_description": "Opis:",
+  "work_insert_date": "Data wpisania:",
+  "work_execution_time": "Czas wykonania:"
 }

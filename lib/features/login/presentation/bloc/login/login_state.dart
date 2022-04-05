@@ -1,11 +1,7 @@
 part of 'login_bloc.dart';
 
 @immutable
-abstract class LoginState extends Equatable {
-  LoginState([List props = const <dynamic>[]]);
-
-  List<Object> get props => [props];
-}
+abstract class LoginState {}
 
 class Empty extends LoginState {}
 

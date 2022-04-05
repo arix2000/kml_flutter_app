@@ -22,6 +22,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       yield failureOrProfileModel.fold(
               (failure) => Error(failure.getErrorMessage()),
               (profileModel) => Loaded(profileModel));
+    } else if (event is OpenChangePassDialogEvent) {
+      yield OpenDialogState();
     }
   }
 }

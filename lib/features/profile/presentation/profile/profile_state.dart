@@ -22,3 +22,5 @@ class Error extends ProfileState {
 
   Error(this.message);
 }
+
+class OpenDialogState extends ProfileState {}

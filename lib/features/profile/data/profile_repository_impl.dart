@@ -1,5 +1,6 @@
 
 import 'package:dartz/dartz.dart';
+import 'package:kml_flutter_app/core/Globals.dart';
 import 'package:kml_flutter_app/core/error/exceptions.dart';
 import 'package:kml_flutter_app/core/error/failures.dart';
 import 'package:kml_flutter_app/core/network/network_info.dart';
@@ -18,6 +19,7 @@ class ProfileRepositoryImpl implements ProfileRepository {
     if (await networkInfo.isConnected) {
       try {
         final result = await remoteDataSource.fetchProfile(userId);
+        _saveName(result);
         return Right(result);
       } on ServerException {
         return Left(ServerFailure());
@@ -25,6 +27,11 @@ class ProfileRepositoryImpl implements ProfileRepository {
     } else {
       return Left(InternetConnectionFailure());
     }
+  }
+
+  void _saveName(ProfileModel profile) {
+    Globals.fistName = profile.firstName;
+    Globals.lastName = profile.lastName;
   }
 
 }

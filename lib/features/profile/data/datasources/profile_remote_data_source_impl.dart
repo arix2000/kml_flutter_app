@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:http/http.dart';
 import 'package:kml_flutter_app/core/error/exceptions.dart';
 import 'package:kml_flutter_app/core/network/app_client.dart';
 import 'package:kml_flutter_app/core/network/network_info.dart';
