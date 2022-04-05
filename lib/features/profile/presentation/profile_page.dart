@@ -1,11 +1,11 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:kml_flutter_app/core/Globals.dart';
 import 'package:kml_flutter_app/core/dependency_injection.dart';
 import 'package:kml_flutter_app/core/extensions/context_ext.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' as bloc;
+import 'package:kml_flutter_app/core/widgets/default_scaffold.dart';
 import 'package:kml_flutter_app/features/changepassword/presentation/change_password_dialog.dart';
-import 'package:kml_flutter_app/features/maincontainer/main_container.dart';
 import 'package:kml_flutter_app/features/profile/presentation/profile/profile_bloc.dart';
 import 'package:kml_flutter_app/features/profile/presentation/widgets/profile_bottom_part/profile_bottom_part.dart';
 import 'package:kml_flutter_app/features/profile/presentation/widgets/profile_top_part.dart';
@@ -22,7 +22,7 @@ class ProfilePage extends StatelessWidget {
   bloc.BlocProvider<ProfileBloc> buildBody(BuildContext context) {
     return bloc.BlocProvider(
       create: (context) => sl<ProfileBloc>(),
-      child: Scaffold(
+      child: DrawerScaffold(
           body: SingleChildScrollView(
               child: Column(
                 children: [
@@ -33,7 +33,7 @@ class ProfilePage extends StatelessWidget {
                       profileTopPart.setNameAndType(state.result);
                       return ProfileBottomPart(profile: state.result);
                     } else if (state is InitialProfileState) {
-                      _getData(context, MainContainer.loginId);
+                      _getData(context, Globals.loginId);
                       return CircularProgressIndicator();
                     } else if (state is Loading)
                       return CircularProgressIndicator();
@@ -47,7 +47,8 @@ class ProfilePage extends StatelessWidget {
           ),
           floatingActionButtonLocation:
               FloatingActionButtonLocation.miniEndFloat,
-          floatingActionButton: FloatingChangePassButton()),
+          floatingActionButton: FloatingChangePassButton()
+      ),
     );
   }
 

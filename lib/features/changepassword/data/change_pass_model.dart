@@ -1,5 +1,4 @@
 import 'package:kml_flutter_app/features/changepassword/domain/change_pass_entity.dart';
-import 'dart:convert';
 
 class ChangePassModel extends ChangePassEntity {
   final int loginId;

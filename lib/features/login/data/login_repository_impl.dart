@@ -1,6 +1,5 @@
 
 import 'package:dartz/dartz.dart';
-import 'package:kml_flutter_app/core/Constants.dart';
 import 'package:kml_flutter_app/core/error/exceptions.dart';
 import 'package:kml_flutter_app/core/error/failures.dart';
 import 'package:kml_flutter_app/core/network/network_info.dart';

@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' as bloc;
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kml_flutter_app/core/Globals.dart';
 import 'package:kml_flutter_app/core/dependency_injection.dart';
 import 'package:kml_flutter_app/core/extensions/context_ext.dart';
 import 'package:kml_flutter_app/core/widgets/text_snack_bar.dart';
 import 'package:kml_flutter_app/core/widgets/app_button.dart';
 import 'package:kml_flutter_app/features/login/data/login_model.dart';
-import 'package:kml_flutter_app/features/maincontainer/main_container.dart';
+import 'package:kml_flutter_app/features/profile/presentation/profile_page.dart';
 import 'bloc/login/login_bloc.dart';
 
 final loginController = TextEditingController();
@@ -55,9 +56,8 @@ class LoginPage extends StatelessWidget {
                         final loginIdString = state.result.characters
                             .characterAt(state.result.length - 2)
                             .string;
-
-                        Navigator.pushNamed(context, MainContainer.route,
-                            arguments: int.parse(loginIdString));
+                        Globals.loginId = int.parse(loginIdString);
+                        Navigator.pushNamed(context, ProfilePage.route);
                       });
                     } else {
                       TextSnackBar(context)

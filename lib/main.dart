@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:kml_flutter_app/core/app_localizations.dart';
 import 'package:kml_flutter_app/core/dependency_injection.dart' as di;
-import 'package:kml_flutter_app/features/maincontainer/main_container.dart';
 import 'package:kml_flutter_app/features/profile/presentation/profile_page.dart';
+import 'package:kml_flutter_app/features/work_history/presentation/work_history_page.dart';
 
 import 'features/login/presentation/login_page.dart';
 
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginPage.route: (context) => LoginPage(),
         ProfilePage.route: (context) => ProfilePage(),
-        MainContainer.route: (context) => MainContainer()
+        WorkHistoryPage.route: (context) => WorkHistoryPage()
       },
       localeResolutionCallback: (locale, supportedLocales) {
         if (locale != null) {

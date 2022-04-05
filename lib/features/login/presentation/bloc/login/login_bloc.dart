@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:kml_flutter_app/core/error/failures.dart';
 import 'package:kml_flutter_app/features/login/data/login_model.dart';
 import 'package:kml_flutter_app/features/login/domain/login_entity.dart';
 import 'package:kml_flutter_app/features/login/domain/usecases/get_saved_log_data_use_case.dart';

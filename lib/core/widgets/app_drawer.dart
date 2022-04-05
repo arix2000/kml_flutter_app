@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kml_flutter_app/features/profile/presentation/profile_page.dart';
+import 'package:kml_flutter_app/features/work_history/presentation/work_history_page.dart';
 
 import 'app_drawer_header.dart';
 
@@ -15,9 +16,7 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.person),
             title: Text("Profil"),
             onTap: () {
-              Navigator.pop(context);
-              Navigator.pushNamed(context, ProfilePage.route);
-              Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, ProfilePage.route);
             },
           ),
           ListTile(
@@ -47,8 +46,7 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.self_improvement_rounded),
             title: Text("Dziennik Indywidualny"),
             onTap: () {
-              Navigator.pop(context);
-              //navigate to work history with WORK tag
+              Navigator.pushReplacementNamed(context, WorkHistoryPage.route);
             },
           ),
           ListTile(

@@ -20,5 +20,10 @@
   "empty_pools": "Pozostały puste pola!",
   "something_wrong": "Coś poszło nie tak! Spróbuj ponownie później",
   "wrong_old_password": "Nieprawidłowe stare hasło!",
-  "password_has_been_changed": "Hasło zostało zmienione!"
+  "password_has_been_changed": "Hasło zostało zmienione!",
+  "no_results": "Brak wyników :(",
+  "work_name": "Nazwa Zadania:",
+  "work_description": "Opis:",
+  "work_insert_date": "Data wpisania:",
+  "work_execution_time": "Czas wykonania:"
 }

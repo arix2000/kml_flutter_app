@@ -1,6 +1,6 @@
 import 'package:data_connection_checker/data_connection_checker.dart';
 
-const API_URL = 'http://sobos.ssd-linuxpl.com/KmlApi5/';
+const API_URL = "http://192.168.1.113/KmlApi5/";//'http://sobos.ssd-linuxpl.com/KmlApi5/';
 const CONTENT_TYPE_KEY = 'Content-Type';
 const CONTENT_TYPE_VALUE = 'application/json';
 const SUCCESSFUL_STATUS_CODE = 200;

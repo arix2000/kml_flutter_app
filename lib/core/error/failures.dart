@@ -1,6 +1,11 @@
 import 'package:equatable/equatable.dart';
 
 abstract class Failure extends Equatable {
+
+  static const SERVER_FAILURE_MESSAGE = "Server failure";
+  static const INTERNET_CONNECTION_FAILURE_MESSAGE = "Internet connection failure";
+  static const CACHE_FAILURE_MESSAGE = "Cache failure";
+
   final List properties = const [];
   Failure([properties]);
 
@@ -10,11 +15,11 @@ abstract class Failure extends Equatable {
   String getErrorMessage() {
     switch(this.runtimeType) {
       case ServerFailure:
-        return 'SERVER_FAILURE_MESSAGE';
+        return SERVER_FAILURE_MESSAGE;
       case InternetConnectionFailure:
-        return 'INTERNET_CONNECTION_FAILURE_MESSAGE';
+        return INTERNET_CONNECTION_FAILURE_MESSAGE;
       case CacheFailure:
-        return 'CACHE_FAILURE_MESSAGE';
+        return CACHE_FAILURE_MESSAGE;
       default:
         return 'Unexpected Error';
     }

@@ -5,7 +5,6 @@ import 'package:kml_flutter_app/core/Constants.dart';
 import 'package:kml_flutter_app/core/dependency_injection.dart';
 import 'package:kml_flutter_app/core/extensions/context_ext.dart';
 import 'package:kml_flutter_app/core/widgets/app_button.dart';
-import 'package:kml_flutter_app/core/widgets/text_snack_bar.dart';
 import 'package:kml_flutter_app/features/changepassword/presentation/change_pass/change_pass_bloc.dart';
 
 final oldPassController = TextEditingController();
